@@ -1,8 +1,14 @@
 language: cpp
-
 compiler:
-  - clang
   - gcc
+  - clang
+# Change this to your needs
+script: cmake CMakeLists.txt && make
 
-script:
-	
+notifications:
+  recipients:
+    - brixen@gmail.com
+    - d.bussink@gmail.com
+  email:
+    on_success: always
+    on_failure: always
