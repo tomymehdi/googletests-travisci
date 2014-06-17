@@ -1,6 +1,15 @@
+before_install: sudo apt-get install cmake
 language: cpp
 compiler:
   - gcc
   - clang
-
+# Change this to your needs
 script: cmake CMakeLists.txt && make
+
+notifications:
+  recipients:
+    - brixen@gmail.com
+    - d.bussink@gmail.com
+  email:
+    on_success: always
+    on_failure: always
